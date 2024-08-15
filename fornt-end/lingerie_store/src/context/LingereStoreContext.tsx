@@ -1,5 +1,4 @@
-// src/contexts/ProductsContext.tsx
-import React, { createContext, useState, useEffect, ReactNode, useContext, FC } from 'react';
+import { createContext, useState, useEffect, ReactNode, FC } from 'react';
 
 import { AxiosError } from 'axios';
 import { Product } from '../type';
@@ -54,12 +53,4 @@ const ProductsProvider: FC<ProductsProviderProps> = ({ children }) => {
     );
 };
 
-const useProducts = () => {
-    const context = useContext(ProductsContext);
-    if (context === undefined) {
-        throw new Error('useProducts must be used within a ProductsProvider');
-    }
-    return context;
-};
-
-export { ProductsProvider, useProducts };
+export { ProductsProvider, ProductsContext };

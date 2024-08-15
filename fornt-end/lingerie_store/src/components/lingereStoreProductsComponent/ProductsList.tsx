@@ -1,5 +1,5 @@
-import React from 'react'
-import { useProducts } from '../../context/LingereStoreContext';
+import useProducts from "../../hooks/useProducts";
+
 
 export const ProductsList = () => {
     const { products, loading, error } = useProducts();
