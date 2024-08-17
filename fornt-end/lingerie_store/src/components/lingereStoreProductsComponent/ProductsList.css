@@ -1,0 +1,81 @@
+.lingerie-products-content {
+    display: grid;
+    grid-template-columns: 15% 80%;
+    gap: 5%;
+    box-sizing: border-box;
+    margin: 0 40px 0 70px;
+}
+
+.filters-products {
+    margin-top: 60px;
+}
+
+.lingerie-products-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    box-sizing: border-box
+}
+
+.lingerie-products {
+    margin-top: 60px;
+    position: relative;
+}
+
+.lingerie-products .liked-product {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: white;
+    display: flex;
+    border-radius: 50%;
+}
+
+.lingerie-products .liked-product .liked-product-icon {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 11.5px;
+    right: 9px;
+}
+
+.lingerie-products .lingerie-image {
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.lingerie-products .product-info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.lingerie-products .product-color {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    height: 40px;
+    align-items: end;
+}
+
+.lingerie-products .product-color .product-color-selection:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.lingerie-products .product-color span {
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-radius: 50%;
+}

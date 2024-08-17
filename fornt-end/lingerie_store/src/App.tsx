@@ -1,12 +1,17 @@
 import "./App.css";
-import { ProductsList } from "./components/lingereStoreProductsComponent/ProductsList";
+import { RouterProvider } from "react-router-dom";
 import { ProductsProvider } from "./context/LingereStoreContext";
+import { router } from "./router";
+import { Header } from "./components/Header/Header";
 
 function App() {
     return (
-        <ProductsProvider>
-            <ProductsList />
-        </ProductsProvider>
+        <div>
+            <Header />
+            <ProductsProvider>
+                <RouterProvider router={router} />
+            </ProductsProvider>
+        </div>
     );
 }
 

@@ -1,0 +1,65 @@
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.header-box {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    background: #F7F7F5;
+    justify-content: space-between;
+    padding: 0 40px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.header-box .brand-logo {
+    font-size: 24px;
+    text-decoration: none;
+    color: #2D2D2D;
+    font-weight: bold;
+}
+
+.header-box .navigation .navigation-list {
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+    list-style: none;
+}
+
+.header-box .navigation .navigation-list .link a{
+    color: #2D2D2D;
+    text-decoration: none;
+}
+.header-box .navigation .navigation-list .link a:hover {
+    color: #666562;
+}
+
+
+.header-box .header-actions {
+    display: flex;
+    gap: 20px;
+    color: #2D2D2D;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.header-search-lingerie {
+    display: none; 
+}
+
+.active-header-search-lingerie {
+    display: block;
+    width: 80%;
+    height: 30px;
+    border-radius: 10px;
+    margin: 5px 0 0 0;
+    padding-left: 15px;
+}
+
+.active-header-search-lingerie::placeholder {
+    font-size: 15px;
+}
