@@ -1,20 +1,9 @@
 import useProducts from "../../hooks/useProducts";
+import { loadLikedProducts, saveLikedProducts } from "../../LocalStorageUtils/LocalStorageUtils";
+import { LikedProductsState } from "../../type";
+import { LingerieFilters } from "../LingeriesFilters/LingerieFilters";
 import "./ProductsList.css";
 import { useEffect, useState } from "react";
-
-type LikedProductsState = Record<string, boolean>;
-
-// Функция для загрузки состояния лайков из localStorage
-const loadLikedProducts = (): LikedProductsState => {
-    const storedState = localStorage.getItem('likedProducts');
-    return storedState ? JSON.parse(storedState) : {};
-};
-
-// Функция для сохранения состояния лайков в localStorage
-const saveLikedProducts = (state: LikedProductsState) => {
-    localStorage.setItem('likedProducts', JSON.stringify(state));
-};
-
 
 export const ProductsList = () => {
     const { products, loading, error } = useProducts();
@@ -43,13 +32,8 @@ export const ProductsList = () => {
     return (
         <div className='lingerie-products-content'>
             <div className='filters-products'>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+            <LingerieFilters/>
+
             </div>
 
             <div className='lingerie-products-box'>
@@ -84,7 +68,7 @@ export const ProductsList = () => {
                         />
                         <section className='product-info'>
                             <span>{product.name}</span>
-                            <span>{product.price}</span>
+                            <span>{product.price}$</span>
                         </section>
                         <section className='product-color'>
                             <div className='product-color-selection'>
@@ -108,3 +92,5 @@ export const ProductsList = () => {
         </div>
     );
 };
+
+

@@ -54,3 +54,4 @@ const ProductsProvider: FC<ProductsProviderProps> = ({ children }) => {
 };
 
 export { ProductsProvider, ProductsContext };
+
