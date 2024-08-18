@@ -14,11 +14,4 @@ export type Product = {
 
 export type LikedProductsState = Record<string, boolean>;
 
-export type FilterCategory = 'material' | 'size' | 'purpose' | 'seasonality';
-
-export interface Filters {
-    material: Set<string>;
-    size: Set<string>;
-    purpose: Set<string>;
-    seasonality: Set<string>;
-}
+export type FilterCategory = string[];
